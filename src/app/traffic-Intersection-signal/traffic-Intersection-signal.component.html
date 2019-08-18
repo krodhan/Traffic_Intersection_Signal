@@ -1,0 +1,35 @@
+<div class="flex-container">
+  <div >  
+  </div>
+  <div >
+  </div>
+  <div >
+      <ul>
+          <li *ngIf="light === 'red';then thenTemplateRed else elseTemplateWhiteone"  class="red"></li>
+          <ng-template #thenTemplateRed>
+              <li class="red"></li>
+          </ng-template>
+          <ng-template #elseTemplateWhiteone>
+              <li class="white"></li>
+          </ng-template>
+          <li *ngIf="light === 'yellow';then thenTemplateYellow else elseTemplateWhitetwo" class="yellow"></li>
+          <ng-template #thenTemplateYellow>
+              <li class="yellow"></li>
+          </ng-template>
+          <ng-template #elseTemplateWhitetwo>
+              <li class="white"></li>
+          </ng-template>
+          <li *ngIf="light === 'green';then thenTemplateGreen else elseTemplateWhitethree" class="green"></li>
+          <ng-template #thenTemplateGreen>
+              <li class="green"></li>
+          </ng-template>
+          <ng-template #elseTemplateWhitethree>
+              <li class="white"></li>
+          </ng-template>
+        </ul>
+  </div>
+  <div>
+      <div *ngIf="appear" [@divState] = "state" style="width:70px; height:70px;position: relative; top:-100px;z-index: 1;">
+        <img src="https://banner2.kisspng.com/20180204/hwe/kisspng-ford-mustang-mach-1-shelby-mustang-car-classic-car-png-pic-5a7786931e6da0.3631535015177826751246.jpg" style="height:70px; width:100px;"></div>
+  </div>
+</div>
